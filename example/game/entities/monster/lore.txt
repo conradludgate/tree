@@ -1,0 +1,3 @@
+This evil mosnter once roamed the empty streets in search for lost souls
+Now it just exists within a go package example
+How sad is that!

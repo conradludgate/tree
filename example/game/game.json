@@ -1,0 +1,4 @@
+{
+	"onload": "Hello World!",
+	"onclose": "Goodbye :("
+}

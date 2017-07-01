@@ -6,7 +6,7 @@ func HandlerTXT(b []byte, path string) (interface{}, error) {
 	return string(b), nil
 }
 
-func HandleYAML(h *ExtHandler) {
+func HandleTXT(h *ExtHandler) {
 	if h == nil {
 		h = DefaultExtHandler
 	}
