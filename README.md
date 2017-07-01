@@ -49,9 +49,9 @@ game.json
 }
 ```
 
-Given the file structure above, which can be found in the [/example](example) directory, you can use the following code
+Given the file structure above, which can be found in the [example](/example) directory, you can use the following code
 
-[/tree_example.go](tree_example.go)
+[tree_example.go](/tree_example.go)
 ```go
 package main
 
@@ -120,9 +120,9 @@ To use tree, we must perform 2 small tasks.
 
 ### Specifying Handles
 
-Handlers in this package work similarly to how the [https://golang.org/pkg/net/http/#Handler](net/http Handlers) work.
+Handlers in this package work similarly to how the [net/http Handlers](https://golang.org/pkg/net/http/#Handler) work.
 
-To specify a handle, we can simply use the [http://godoc.org/github.com/conradludgate/tree#Handle](Handle) or [http://godoc.org/github.com/conradludgate/tree#HandleFunc](HandleFunc) methods.
+To specify a handle, we can simply use the [Handle](http://godoc.org/github.com/conradludgate/tree#Handle) or [HandleFunc](http://godoc.org/github.com/conradludgate/tree#HandleFunc) methods.
 These take in a file extention, as a string, and a Handler.
 
 All the built in file handles come with a simple method to enable them on the extention handler, such as `tree.HandleJSON(nil)` instead of `tree.HandleFunc(tree.JSON, tree.HandlerJSON)`
@@ -134,13 +134,13 @@ The first and simplest way is to specify our file path as a string. This will us
 
 The second method uses an *os.File instead of a file path and skips the middle step above.
 
-The [http://godoc.org/github.com/conradludgate/tree#GenerateTree](GenerateTree) function returns an interface{} and an error.
+The [GenerateTree](http://godoc.org/github.com/conradludgate/tree#GenerateTree) function returns an interface{} and an error.
 
 ### How to use the results
 
 The returned interface{} doesn't provide much use, so we've provided a few small tools to get through the tree.
 
-The functions [http://godoc.org/github.com/conradludgate/tree#Get](Get) and [http://godoc.org/github.com/conradludgate/tree#Insert](Insert), along with their WithSlice equivelents use the inputs to recurse through the given tree to find or insert more interface{} values, which are still not that useful but it helps. You can use [https://golang.org/ref/spec#Type_assertions](type assertion) or [https://golang.org/pkg/reflect/](reflect) to help with using the vague interface{} types.
+The functions [Get](http://godoc.org/github.com/conradludgate/tree#Get) and [Insert](http://godoc.org/github.com/conradludgate/tree#Insert), along with their WithSlice equivelents use the inputs to recurse through the given tree to find or insert more interface{} values, which are still not that useful but it helps. You can use [type assertion](https://golang.org/ref/spec#Type_assertions) or [reflect](https://golang.org/pkg/reflect/) to help with using the vague interface{} types.
 
 ## Some extra notes
 
